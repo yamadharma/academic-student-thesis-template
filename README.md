@@ -12,5 +12,18 @@ gh repo create <название_репозитория> --template=yamadharma/a
 gh repo clone <название_репозитория> -- --recursive
 ```
 
+## Создание рабочего каталога
 
+- Создайте рабочий каталог:
+
+``` shell
+make prepare
+```
+
+- Теперь можно работать с проектом:
+
+``` shell
+cd bachalor
+make
+```
 

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+TYPE=$(cat TYPE)
+
+if [[ -z "${TYPE}" ]]
+then 	
+    echo "Please use the correct type of work"
+    exit 1
+fi
+
+mkdir -p ${TYPE}
+cp -R template/kermit-makefiles/makefiles/* ${TYPE}
+cp -R template/kermit-makefiles/scripts/bibtool/biblatex/* ${TYPE}/bib
+cp -R template/phdthesr/* ${TYPE}
+cp -R template/common-template/* ${TYPE}
+cp -R template/phdthesr-template/type/${TYPE}/* ${TYPE}
+
+
+

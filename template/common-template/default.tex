@@ -1,0 +1,50 @@
+%% Подключение файла с преамбулой
+\input preamble
+
+%% Определения
+\input{define}
+
+%% Подключение файла с библиографией
+%{{{ bibtex
+
+% \bibliography{bib/cite}
+
+%}}}
+%{{{ biblatex
+
+\addbibresource{bib/cite.bib}
+
+%}}}
+
+\begin{document}
+
+%% Подключение файла с титульным листом
+\input{title} %
+
+%% Отображение содержания работы
+\tableofcontents
+
+%% Подключение файлов с текстом работы:
+\input{text}
+
+%% biblatex
+\printbibliography[heading=bibintoc]
+
+%% Подключение файлов с приложениями
+\appendix
+
+\input{text-appendix}
+
+%% Список иллюстраций
+\listoffigures
+
+%% Список таблиц
+\listoftables
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: utf-8-unix
+%%% End:

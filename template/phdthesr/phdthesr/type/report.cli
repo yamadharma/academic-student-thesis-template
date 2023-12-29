@@ -1,0 +1,34 @@
+\input{phdthesr/type/title-brs.cli}
+
+\setboolean{brsTableNeeded}{false}
+\setboolean{approvedStampNeeded}{false}
+
+\AtBeginDocument{%
+    \@ifpackageloaded{polyglossia}{%
+    \addto\captionsrussian@modern{%
+        \thesistype{Отчёт}
+        \def\PHDdisciplineDescr{по дисциплине}
+    }
+    }{%
+        \thesistype{{\CYRO}{\cyrt}{\cyrch}{\cyryo}{\cyrt}}
+        \def\PHDdisciplineDescr{{\cyrp}{\cyro} {\cyrd}{\cyri}{\cyrs}{\cyrc}{\cyri}{\cyrp}{\cyrl}{\cyri}{\cyrn}{\cyre}}
+    }
+}
+
+\PassOptionsToClass{a4paper,12dd,oneside,onecolumn,final,openany,onehalfspace}{kgeneric}
+
+\AtEndOfClass{%
+  \geometry{bindingoffset=0pt}
+  \geometry{left=30mm,right=15mm,top=20mm,bottom=20mm}
+  \geometry{includefoot=false,includehead=true}
+  \geometry{nofoot}
+  \geometry{nomarginpar}
+  \geometry{heightrounded}
+}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: utf-8-unix
+%%% End:
+

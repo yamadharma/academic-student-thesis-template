@@ -1,0 +1,39 @@
+\input{phdthesr/type/title-brs.cli}
+
+\AtBeginDocument{%
+    \@ifpackageloaded{polyglossia}{%
+	\addto\captionsrussian@modern{%
+	    \thesistype{Отчёт по НИРС}
+	    \def\bibname{Список источников}
+	    \def\chaptername{}
+	}
+    }%
+    {%
+	\thesistype{{\CYRO}{\cyrt}{\cyrch}{\cyryo}{\cyrt} {\cyrp}{\cyro} {\CYRN}{\CYRI}{\CYRR}{\CYRS}}
+	    \def\bibname{{\CYRS}{\cyrp}{\cyri}{\cyrs}{\cyro}{\cyrk} {\cyri}{\cyrs}{\cyrt}{\cyro}{\cyrch}{\cyrn}{\cyri}{\cyrk}{\cyro}{\cyrv}}
+	    \def\chaptername{}
+    }
+}
+
+%\AtEndOfClass{%
+% \def\@chapapp{}
+%  \setcounter{tocdepth}{1}
+%}
+
+\PassOptionsToClass{a4paper,12dd,oneside,onecolumn,final,openany,onehalfspace}{kgeneric}
+
+\AtEndOfClass{%
+  \geometry{bindingoffset=0pt}
+  \geometry{left=30mm,right=15mm,top=20mm,bottom=20mm}
+  \geometry{includefoot=false,includehead=true}
+  \geometry{nofoot}
+  \geometry{nomarginpar}
+  \geometry{heightrounded}
+}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% coding: utf-8-unix
+%%% End: 
+

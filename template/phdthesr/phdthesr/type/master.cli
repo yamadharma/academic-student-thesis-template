@@ -1,0 +1,91 @@
+\input{phdthesr/type/title-brs.cli}
+
+\setboolean{brsTableNeeded}{false}
+\setboolean{approvedStampNeeded}{true}
+
+\renewcommand{\brsTable}{%
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hlx{hv}
+\brsTableProblemType & \brsTableBalls & \brsTableBallsSum \\
+\hlx{vhv}
+1. \brsTableText & 0--40 & \\
+\hlx{vhv}
+2. \brsTablePresentation & 0--10 & \\
+\hlx{vhv}
+3. \brsTableProtection & 0--50 & \\
+\hlx{vhv[1]}
+\multicolumn{2}{|l|}{\brsTableTotal} & \\
+\hlx{v[1]h}
+\end{tabular}
+\end{center}
+}
+
+\AtBeginDocument{%
+    \@ifpackageloaded{polyglossia}{%
+    \addto\captionsrussian@modern{%
+        % \thesistype{Диссертация на соискание степени}
+        \thesistype{Выпускная квалификационная работа\protect\par магистра}
+        % \def\PHDauthorDescr{Студент}
+        \def\PHDstudygroupDescr{Группа}
+        \def\PHDcountryDescr{Страна}
+        \def\PHDchiefDescr{Научный руководитель}
+        \def\PHDdisciplineDescr{по дисциплине}
+        \def\brsTableText{Текст магистерской диссертации}
+        \def\brsTablePresentation{Презентация по магистерской диссертации}
+        \def\brsTableProtection{Защита магистерской диссертации}
+    }
+    }{%
+        % \thesistype{\cyr\CYRD\cyri\cyrs\cyrs\cyre\cyrr\cyrt\cyra\cyrc\cyri\cyrya{} \cyr\cyrn\cyra{} 
+        % \cyr\cyrs\cyro\cyri\cyrs\cyrk\cyra\cyrn\cyri\cyre{}
+        % \cyr\cyrs\cyrt\cyre\cyrp\cyre\cyrn\cyri}
+      \thesistype{{\CYRV}{\cyrery}{\cyrp}{\cyru}{\cyrs}{\cyrk}{\cyrn}{\cyra}{\cyrya}
+        {\cyrk}{\cyrv}{\cyra}{\cyrl}{\cyri}{\cyrf}{\cyri}{\cyrk}{\cyra}{\cyrc}{\cyri}{\cyro}{\cyrn}{\cyrn}{\cyra}{\cyrya}
+        {\cyrr}{\cyra}{\cyrb}{\cyro}{\cyrt}{\cyra}{\protect\par}
+        {\cyrm}{\cyra}{\cyrg}{\cyri}{\cyrs}{\cyrt}{\cyrr}{\cyra}}
+      % 
+      % \def\PHDauthorDescr{\cyr\CYRS\cyrt\cyru\cyrd\cyre\cyrn\cyrt{}}
+      \def\PHDstudygroupDescr{\cyr\CYRG\cyrr\cyru\cyrp\cyrp\cyra{}}
+      \def\PHDcountryDescr{\cyr\CYRS\cyrt\cyrr\cyra\cyrn\cyra{}}
+      \def\PHDchiefDescr{\cyr\CYRN\cyra\cyru\cyrch\cyrn\cyrery\cyrishrt{}
+        \cyr\cyrr\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn{}}
+      \def\PHDdisciplineDescr{{\cyrp}{\cyro}
+        {\cyrd}{\cyri}{\cyrs}{\cyrc}{\cyri}{\cyrp}{\cyrl}{\cyri}{\cyrn}{\cyre}}
+      \def\brsTableText{{\CYRT}{\cyre}{\cyrk}{\cyrs}{\cyrt}
+        {\cyrm}{\cyra}{\cyrg}{\cyri}{\cyrs}{\cyrt}{\cyre}{\cyrr}{\cyrs}{\cyrk}{\cyro}{\cyrishrt} 
+        {\cyrd}{\cyri}{\cyrs}{\cyrs}{\cyre}{\cyrr}{\cyrt}{\cyra}{\cyrc}{\cyri}{\cyri}}
+      \def\brsTablePresentation{{\CYRP}{\cyrr}{\cyre}{\cyrz}{\cyre}{\cyrn}{\cyrt}{\cyra}{\cyrc}{\cyri}{\cyrya} 
+        {\cyrp}{\cyro}
+        {\cyrm}{\cyra}{\cyrg}{\cyri}{\cyrs}{\cyrt}{\cyre}{\cyrr}{\cyrs}{\cyrk}{\cyro}{\cyrishrt}
+        {\cyrd}{\cyri}{\cyrs}{\cyrs}{\cyre}{\cyrr}{\cyrt}{\cyra}{\cyrc}{\cyri}{\cyri}}
+      \def\brsTableProtection{{\CYRZ}{\cyra}{\cyrshch}{\cyri}{\cyrt}{\cyra}
+        {\cyrm}{\cyra}{\cyrg}{\cyri}{\cyrs}{\cyrt}{\cyre}{\cyrr}{\cyrs}{\cyrk}{\cyro}{\cyrishrt}
+        {\cyrd}{\cyri}{\cyrs}{\cyrs}{\cyre}{\cyrr}{\cyrt}{\cyra}{\cyrc}{\cyri}{\cyri}}
+    }
+}
+
+
+
+%\AtBeginDocument{%
+%}
+\AtEndOfClass{%
+%    \def\@chapapp{}
+    \setcounter{tocdepth}{1}
+}
+
+\AtEndOfClass{%
+  % \geometry{includehead}
+  \geometry{left=30mm,right=15mm,top=20mm,bottom=20mm}
+  \geometry{bindingoffset=0mm}
+  \geometry{marginparwidth=0dd,marginparsep=0dd}
+  \geometry{heightrounded}
+}
+
+\PassOptionsToClass{a4paper,14pt,oneside,onecolumn,final,openany,onehalfspace}{kgeneric}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: utf-8-unix
+%%% End: 
+

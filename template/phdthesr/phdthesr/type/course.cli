@@ -1,0 +1,59 @@
+\input{phdthesr/type/title-brs.cli}
+
+\providecommand{\brsTable}{%
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hlx{hv}
+\brsTableProblemType & \brsTableBalls & \brsTableBallsSum \\
+\hlx{vhv}
+1. \brsTableAttestInterim & 0--40 & \\
+\hlx{vhv}
+2. \brsTableCourse & 0--50 & \\
+\hlx{vhv}
+3. \brsTableAttestFinal & 0--10 & \\
+\hlx{vhv[1]}
+\multicolumn{2}{|l|}{\brsTableTotal} & \\
+\hlx{v[1]h}
+\end{tabular}
+\end{center}
+}
+
+\AtBeginDocument{%
+    \@ifpackageloaded{polyglossia}{%
+	\thesistype{Курсовая работа}
+    }{%
+	\thesistype{\CYRK\cyru\cyrr\cyrs\cyro\cyrv\cyra\cyrya{} \cyrr\cyra\cyrb\cyro\cyrt\cyra}
+    }
+
+    \@ifpackageloaded{polyglossia}{%
+	\addto\captionsrussian@modern{%
+	    \def\bibname{Список источников}
+	    \def\chaptername{}
+	}
+    }{}
+}
+
+%\AtEndOfClass{%
+%    \def\@chapapp{}
+%    \setcounter{tocdepth}{1}
+%}
+
+\AtEndOfClass{%
+  \geometry{bindingoffset=0pt}
+  \geometry{left=30mm,right=15mm,top=20mm,bottom=20mm}
+  \geometry{includefoot=false,includehead=true}
+  \geometry{nofoot}
+  \geometry{nomarginpar}
+  \geometry{heightrounded}
+}
+
+
+\PassOptionsToClass{a4paper,12pt,oneside,onecolumn,final,openany,onehalfspace}{kgeneric}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: utf-8-unix
+%%% End: 
+

@@ -1,0 +1,136 @@
+\AtBeginDocument{%
+  \@ifpackageloaded{polyglossia}{%
+    \addto\captionsrussian@modern{%
+      \thesistype{Диссертация на соискание учёной степени}
+      \def\PHDright{На правах рукописи}
+      \def\PHDchiefDescr{Научный руководитель}
+      \def\PHDdisciplineDescr{Специальность}
+      }
+    }{%
+    \thesistype{\cyr\CYRD\cyri\cyrs\cyrs\cyre\cyrr\cyrt\cyra\cyrc\cyri\cyrya{} \cyr\cyrn\cyra{} 
+      \cyr\cyrs\cyro\cyri\cyrs\cyrk\cyra\cyrn\cyri\cyre{} \cyr\cyru\cyrch\cyryo\cyrn\cyro\cyrishrt{}
+      \cyr\cyrs\cyrt\cyre\cyrp\cyre\cyrn\cyri}
+    \def\PHDright{\cyr\CYRN\cyra{} \cyr\cyrp\cyrr\cyra\cyrv\cyra\cyrh{} \cyr\cyrr\cyru\cyrk\cyro\cyrp\cyri\cyrs\cyri}
+    \def\PHDchiefDescr{\cyr\CYRN\cyra\cyru\cyrch\cyrn\cyrery\cyrishrt{} \cyr\cyrr\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn{}}
+    \def\PHDdisciplineDescr{{\CYRS}{\cyrp}{\cyre}{\cyrc}{\cyri}{\cyra}{\cyrl}{\cyrsftsn}{\cyrn}{\cyro}{\cyrs}{\cyrt}{\cyrsftsn}}
+    }
+  }
+  
+\AtEndOfClass{%
+  \setcounter{tocdepth}{1}
+  }
+
+\AtEndOfClass{%
+  \renewcommand{\headerFontSize}{\normalsize}
+  }
+  
+\AtEndOfClass{%
+  \geometry{includehead}
+  \geometry{left=30mm,right=15mm,top=20mm,bottom=20mm}
+  \geometry{bindingoffset=0mm}
+  \geometry{marginparwidth=0dd,marginparsep=0dd}
+  \geometry{heightrounded}
+  \usepackage[doublespacing]{setspace}
+}
+
+\PassOptionsToClass{a4paper,14pt,oneside,onecolumn,final,openany}{scrreprt}
+% \KOMAoptions{a4paper,14pt,oneside,onecolumn,final,openany}
+
+
+\AtEndOfClass{%
+\renewcommand{\maketitle}{%
+\begin{titlepage}%
+{
+    \ssp
+    \begin{alwayssingle}
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \thispagestyle{empty}
+%     \setcounter{page}{1}
+%    \null\vfil
+    \begin{center}
+        {\bfseries \MakeUppercase{\PHDministry} \par}
+        {\bfseries \MakeUppercase{\PHDinstitute} \par}
+        {\bfseries {\PHDfaculty} \par}
+    \end{center}
+
+    \medskip
+
+    \begin{flushright}
+        %% На правах рукописи
+        {\bfseries \PHDright \par}
+    \end{flushright}
+    
+    \vspace{3cm}
+
+    \begin{center}
+        \bigskip%
+        \medskip%
+        {\bfseries \PHDauthor} \par                     % Автор
+        \bigskip% 
+        \medskip%
+        {\bfseries \Large {\PHDtitle} \par}             % Название
+
+        \vspace{6ex}
+
+        \ifx\@empty\PHDfield
+        \else%
+        \bigskip%
+        \bigskip%
+        %\medskip
+        %\vspace{6ex}
+        %\bigskip% 
+        %\medskip%
+        {\PHDdisciplineDescr} {\PHDfield} \par                    % Специальность
+        \fi
+
+        \bigskip
+        
+        {\PHDthesistype} \par
+        \smallskip
+        {\PHDdegree} \par
+        \bigskip%
+        \medskip%
+        \end{center}
+
+        \bigskip% 
+        \bigskip% 
+        \bigskip% 
+        \bigskip% 
+        \bigskip% 
+        \bigskip% 
+
+        \begin{flushright}
+            %% Научный руководитель 
+            {\PHDchiefDescr} \\\
+            {\PHDchiefdegree} \\ 
+            {\PHDchief} \par
+        \end{flushright}
+
+        \vspace*{\fill}    
+
+        \begin{center}
+            \bfseries
+            {\PHDdegreecity} ---                        % Город
+            {\PHDdegreeyear} \par      
+        \end{center}
+    
+        \vfil\null
+
+    \end{alwayssingle}%
+}    
+\end{titlepage}%
+
+\setcounter{footnote}{0}
+
+\clearpage
+\setcounter{page}{2}
+}      % End of \def\maketitle
+} % End AtEndOfClass
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: utf-8-unix
+%%% End: 
+

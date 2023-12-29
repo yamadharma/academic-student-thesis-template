@@ -1,0 +1,69 @@
+\input{phdthesr/type/title-student.cli}
+    
+% \renewcommand{\brsTable}{%
+%   \begin{center}
+%     \begin{tabular}{|l|c|c|}
+%       \hlx{hv}
+%       \brsTableProblemType & \brsTableBalls & \brsTableBallsSum \\
+%         \hlx{vhv}
+%       1. \brsTableText & 0--40 & \\
+%       \hlx{vhv}
+%       2. \brsTablePresentation & 0--10 & \\
+%       \hlx{vhv}
+%       3. \brsTableProtection & 0--50 & \\
+%       \hlx{vhv[1]}
+%       \multicolumn{2}{|l|}{\brsTableTotal} & \\
+%       \hlx{v[1]h}
+%     \end{tabular}
+%   \end{center}
+% }
+
+
+\AtBeginDocument{%
+  \@ifpackageloaded{polyglossia}{%
+    \addto\captionsrussian@modern{%
+      \thesistype{Выпускная квалификационная работа\protect\par бакалавра}
+      \def\PHDcountryDescr{Страна}
+      % \def\PHDchiefDescr{Научный руководитель}
+      \def\PHDchiefDescr{Руководитель выпускной квалификационной работы}
+      \def\PHDdisciplineDescr{по дисциплине}
+      \def\PHDstudentdegree{бакалавр}
+      }
+    }{%
+    \thesistype{{\CYRV}{\cyrery}{\cyrp}{\cyru}{\cyrs}{\cyrk}{\cyrn}{\cyra}{\cyrya}
+        {\cyrk}{\cyrv}{\cyra}{\cyrl}{\cyri}{\cyrf}{\cyri}{\cyrk}{\cyra}{\cyrc}{\cyri}{\cyro}{\cyrn}{\cyrn}{\cyra}{\cyrya}
+        {\cyrr}{\cyra}{\cyrb}{\cyro}{\cyrt}{\cyra}\protect\par
+        {\cyrb}{\cyra}{\cyrk}{\cyra}{\cyrl}{\cyra}{\cyrv}{\cyrr}{\cyra}}
+    \def\PHDcountryDescr{\cyr\CYRS\cyrt\cyrr\cyra\cyrn\cyra{}}
+      % \def\PHDchiefDescr{\cyr\CYRN\cyra\cyru\cyrch\cyrn\cyrery\cyrishrt{}
+      % \cyr\cyrr\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn{}}
+      % \def\PHDdisciplineDescr{{\cyrp}{\cyro}          
+      %   {\cyrd}{\cyri}{\cyrs}{\cyrc}{\cyri}{\cyrp}{\cyrl}{\cyri}{\cyrn}{\cyre}}
+    \def\PHDchiefDescr{{\CYRR}{\cyru}{\cyrk}{\cyro}{\cyrv}{\cyro}{\cyrd}{\cyri}{\cyrt}{\cyre}{\cyrl}{\cyrsftsn}
+        {\cyrv}{\cyrery}{\cyrp}{\cyru}{\cyrs}{\cyrk}{\cyrn}{\cyro}{\cyrishrt}
+        {\cyrk}{\cyrv}{\cyra}{\cyrl}{\cyri}{\cyrf}{\cyri}{\cyrk}{\cyra}{\cyrc}{\cyri}{\cyro}{\cyrn}{\cyrn}{\cyro}{\cyrishrt} {\cyrr}{\cyra}{\cyrb}{\cyro}{\cyrt}{\cyrery}}
+    \def\PHDstudentdegree{{\cyrb}{\cyra}{\cyrk}{\cyra}{\cyrl}{\cyra}{\cyrv}{\cyrr}}
+  }
+}
+
+\AtEndOfClass{%
+  \setcounter{tocdepth}{1}
+}
+
+\AtEndOfClass{%
+  % \geometry{includehead}
+  \geometry{left=30mm,right=15mm,top=20mm,bottom=20mm}
+  \geometry{bindingoffset=0mm}
+  \geometry{marginparwidth=0dd,marginparsep=0dd}
+  \geometry{heightrounded}
+  \usepackage{setspace}
+  \onehalfspacing
+  }
+
+\PassOptionsToClass{a4paper,13pt,oneside,onecolumn,final,openany}{scrreprt}  
+
+%%% Local Variables: 
+%%% mode: latex
+%%% coding: utf-8-unix
+%%% End: 
+

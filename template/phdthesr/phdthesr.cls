@@ -1712,7 +1712,8 @@ by\par
 %\def\@evenhead{\rmfamily\thepage\hfil\hbox{}}}         % heading (left)
 
 
-\providecommand{\headerFontSize}{\footnotesize}
+% \providecommand{\headerFontSize}{\footnotesize}
+\providecommand{\headerFontSize}{\normalsize}
 
 \RequirePackage{fancyhdr}%
 

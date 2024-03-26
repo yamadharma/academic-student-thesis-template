@@ -116,7 +116,7 @@
 \providecommand{\approvedStamp}{%
   \begin{flushright}
     \begin{minipage}[t]{0.4\linewidth}
-      \begin{flushright}
+      \begin{flushleft}
         \PHDapprove \\
         \medskip
         {\PHDdepchieftitle} \\
@@ -124,7 +124,7 @@
         \rule{3cm}{0.4pt} {\PHDdepchief} \\
         \smallskip
         <<\rule{1cm}{0.4pt}>> \rule{2cm}{0.4pt} 20\rule{1cm}{0.4pt}\PHDyearShort
-      \end{flushright}
+      \end{flushleft}
     \end{minipage}
   \end{flushright}
 }
@@ -149,16 +149,16 @@
     % Группа
     \ifx\@empty\PHDstudygroup
     \else%
-    {\PHDstudygroupDescr}
-    {\PHDstudygroup} \par
-    \smallskip
+      {\PHDstudygroupDescr}
+      {\PHDstudygroup} \par
+      \smallskip
     \fi
     % Студбилет
     \ifx\@empty\PHDstudentid
     \else%
-    {\PHDstudentidDescr}
-    {\PHDstudentid} \par
-    \smallskip
+      {\PHDstudentidDescr}
+      {\PHDstudentid} \par
+      \smallskip
     \fi
   \end{minipage}
   \hfill
@@ -228,18 +228,15 @@
             % \hrule
             \smallskip
             %% Факультет
-            {\bfseries {\PHDfaculty} \par}
+            {\small \bfseries {\PHDfaculty} \par}
             %% Кафедра
-            {\bfseries {\PHDchair} \par}
-            % {{{ Специальность
-
+            {\small \bfseries {\PHDchair} \par}
+            %% Специальность
             % \ifx\@empty\PHDfield
             % \else%
-            % \bigskip%
-            % {\PHDfield} \par
+            %   \bigskip%
+            %   {\PHDfield} \par
             % \fi
-
-            % }}}
           \end{center}
 
           \bigskip
@@ -277,54 +274,54 @@
 
           % \vspace{6ex}
 
-          % Специальность
+          %% Специальность
           \begin{center}
             \ifx\@empty\PHDfield
             \else%
-            {\PHDfieldDescr}
-            {\PHDfield} \par
+              {\PHDfieldDescr}
+              {\PHDfield} \par
             \fi
           \end{center}
-           % Программа
+          %% Программа
           \begin{center}
             \ifx\@empty\PHDprogram
             \else%
-            \smallskip
-            {\PHDprogramDescr}
-            {\PHDprogram} \par
+              \smallskip
+              {\PHDprogramDescr}
+              {\PHDprogram} \par
             \fi
           \end{center}
-
-          % Название
+          
+          % %Название
           % \begin{center}
-            \ifx\@empty\PHDtitle
-            \else
+          \ifx\@empty\PHDtitle
+          \else
             \noindent
             \textsc{\PHDtitleDescr}
             {<<{\PHDtitle}>> \par}
             \medskip
-            \fi
+          \fi
           % \end{center}
 
           % \begin{center}
           %   \ifx\@empty\PHDstudentdegree
           %   \else%
-          %   \bigskip%
-          %   \PHDstudentdegreeDescr: \PHDstudentdegree \par
+          %     \bigskip%
+          %     \PHDstudentdegreeDescr: \PHDstudentdegree \par
           %   \fi
           % \end{center}
-
+          
           % \begin{center}
           %   \ifx\@empty\PHDdegree
-          %     \else
-          %       {\PHDdegreeDescr}
-          %       {\PHDdegree}
-          %     \fi
-          %   \end{center}
+          %   \else
+          %     {\PHDdegreeDescr}
+          %     {\PHDdegree}
+          %   \fi
+          % \end{center}
+          
+          \authorTable
 
-        \authorTable
-
-          % Нужна ли таблица БРС
+          %% Нужна ли таблица БРС
           \ifthenelse{\boolean{brsTableNeeded}}{%
             \bigskip
             \brsTable
@@ -338,7 +335,7 @@
             {\PHDdegreecity}\\
             {\PHDdegreeyear}
           \end{center}
-
+          
         \end{singlespace}
       }
     \end{titlepage}%

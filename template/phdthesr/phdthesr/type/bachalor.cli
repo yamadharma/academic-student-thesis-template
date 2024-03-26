@@ -56,8 +56,9 @@
   \geometry{bindingoffset=0mm}
   \geometry{marginparwidth=0dd,marginparsep=0dd}
   \geometry{heightrounded}
+  % \geometry{showframe}
   \usepackage[keepfontsize]{setspaceenhanced}
-  \spacesetup{onehalfspacing}
+  \spacesetup{onehalfspacing}  
 }
 
 \PassOptionsToClass{a4paper,fontsize=14pt,twoside=false,twocolumn=false,draft=false,open=any}{scrreprt}

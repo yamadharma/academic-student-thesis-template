@@ -60,7 +60,7 @@
   \spacesetup{onehalfspacing}
 }
 
-\PassOptionsToClass{a4paper,14pt,oneside,onecolumn,final,openany}{scrreprt}
+\PassOptionsToClass{a4paper,fontsize=14pt,twoside=false,twocolumn=false,draft=false,open=any}{scrreprt}
 
 %%% Local Variables: 
 %%% mode: latex

@@ -1,4 +1,4 @@
-# Tempalate for Student's thesis
+# Template for Student's thesis
 
 ## Скачайте репозиторий
 

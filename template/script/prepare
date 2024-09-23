@@ -9,11 +9,17 @@ then
 fi
 
 mkdir -p ${TYPE}
-cp -R template/kermit-makefiles/makefiles/* ${TYPE}
-cp -R template/kermit-makefiles/scripts/bibtool/biblatex/* ${TYPE}/bib
-cp -R template/phdthesr/* ${TYPE}
-cp -R template/common-template/* ${TYPE}
-cp -R template/phdthesr-template/type/${TYPE}/* ${TYPE}
+cp -R template/phdthesr-skel/"${TYPE}"/* "${TYPE}"
 
-
+for i in thesis synopsis
+do
+    if [[ -d "${TYPE}"/"${i}" ]]
+    then	
+	cp -R template/kermit-makefiles/makefiles/* "${TYPE}"/"${i}"
+	cp -R template/kermit-makefiles/scripts/bibtool/biblatex/* "${TYPE}"/"${i}"/bib
+	cp -R template/phdthesr/* "${TYPE}"/"${i}"
+	cp -R template/common-template/"${i}"/* "${TYPE}"/"${i}"
+    fi
+done
+cp -R template/phdthesr-template/"${TYPE}"/* "${TYPE}"
 
